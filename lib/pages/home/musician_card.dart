@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wang_music_app/theme.dart';
 
 class MusicianCard extends StatelessWidget {
   const MusicianCard(
@@ -25,18 +26,9 @@ class MusicianCard extends StatelessWidget {
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(120))),
               child: Image.asset(photo)),
-          Text(
-            name,
-            style: const TextStyle(
-              fontSize: 16,
-              color: Color(0xFF002150),
-            ),
-          ),
+          Text(name, style: primaryText),
           const SizedBox(height: 5),
-          Text(
-            category,
-            style: const TextStyle(fontSize: 12, color: Color(0xFF7A869A)),
-          )
+          Text(category, style: secondaryText)
         ],
       ),
     );
